@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BARIAlink - 10 Year Anniversary</title>
+    <!--<link rel="stylesheet" href="styles.css" />-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* --- Section --- 1 */
+
+:root {
+  --bg-dark: #140f49;
+  --text-white: #ffffff;
+  --accent-orange: #ff7a00;
+  --accent-blue: #4da9ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  line-height: 1.6;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-dark);
+  padding-bottom: 10px;
+}
+
+.decor-line {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border: 12px solid #b829cc;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.decor-left {
+  bottom: 5%;
+  left: -150px;
+  transform: rotate(45deg);
+  border-bottom: none;
+  border-left: none;
+  border-radius: 30px;
+}
+
+.decor-right {
+  top: 40%;
+  right: -250px;
+  transform: translateY(-50%) rotate(225deg);
+  width: 350px;
+  height: 350px;
+  border-bottom: none;
+  border-left: none;
+  border-radius: 30px;
+}
+
+.logo-box {
+  position: absolute;
+  top: 80px;
+}
+
+.logo-left {
+  left: 40px;
+}
+
+.logo-right {
+  right: 40px;
+}
+
+.logo {
+  max-width: 140px;
+  height: auto;
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.highlight-orange {
+  color: var(--accent-orange);
+  font-weight: 800;
+}
+.highlight-blue {
+  color: var(--accent-blue);
+  font-weight: 800;
+}
+
+.event-date {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.btn-registration {
+  display: inline-block;
+  background-color: var(--accent-orange);
+  color: white;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 400;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 50px;
+  font-size: 1.2rem;
+}
+
+.btn-registration:hover {
+  transform: scale(1.05);
+}
+
+.countdown-card {
+  position: relative;
+  display: inline-block;
+  padding: 50px 60px 20px 60px;
+  background-color: #ffffff;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 240' preserveAspectRatio='none'%3E%3Cpath d='M25,0 L575,0 a 25,25 0 0 1 25,25 L600,215 a 25,25 0 0 1 -25,25 L285,240 a 25,25 0 0 1 -25,-25 a 25,25 0 0 0 -25,-25 L25,190 a 25,25 0 0 1 -25,-25 L0,25 a 25,25 0 0 1 25,-25' fill='black'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 240' preserveAspectRatio='none'%3E%3Cpath d='M25,0 L575,0 a 25,25 0 0 1 25,25 L600,215 a 25,25 0 0 1 -25,25 L285,240 a 25,25 0 0 1 -25,-25 a 25,25 0 0 0 -25,-25 L25,190 a 25,25 0 0 1 -25,-25 L0,25 a 25,25 0 0 1 25,-25' fill='black'/%3E%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+  min-width: 720px;
+  z-index: 3;
+}
+
+.label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f0a3d;
+  margin-top: 15px;
+  display: block;
+}
+
+.countdown-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.countdown-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 25px;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.countdown-footer {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #444;
+  text-align: right;
+  white-space: nowrap;
+  padding-right: 0;
+}
+
+.number {
+  font-size: 5.5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #0f0a3d;
+  display: block;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  -moz-font-feature-settings: "tnum";
+  -webkit-font-feature-settings: "tnum";
+  font-feature-settings: "tnum";
+  min-width: 1.2em;
+  text-align: center;
+}
+
+.time-unit {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inner-width-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  min-width: 600px;
+  margin: 0 auto;
+}
+
+.white-footer-block {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 150px;
+    padding-bottom: 200px;
+  }
+  .logo-box {
+    position: absolute;
+    top: 20px;
+  }
+  .logo-left {
+    left: 15px;
+  }
+  .logo-right {
+    right: 15px;
+  }
+  .logo {
+    max-width: 90px;
+  }
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  .event-date {
+    font-size: 1.3rem;
+    margin-bottom: 45px;
+  }
+  .btn-registration {
+    margin-bottom: 70px;
+    padding: 14px 40px;
+  }
+  .countdown-card {
+    min-width: unset;
+    width: 92%;
+    max-width: 420px;
+    padding: 40px 20px 65px 20px;
+    background-color: #ffffff;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 600' preserveAspectRatio='none'%3E%3Cpath d='M25,0 L375,0 a 25,25 0 0 1 25,25 L400,575 a 25,25 0 0 1 -25,25 L210,600 a 25,25 0 0 1 -25,-25 a 25,25 0 0 0 -25,-25 L25,550 a 25,25 0 0 1 -25,-25 L0,25 a 25,25 0 0 1 25,-25' fill='black'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 600' preserveAspectRatio='none'%3E%3Cpath d='M25,0 L375,0 a 25,25 0 0 1 25,25 L400,575 a 25,25 0 0 1 -25,25 L210,600 a 25,25 0 0 1 -25,-25 a 25,25 0 0 0 -25,-25 L25,550 a 25,25 0 0 1 -25,-25 L0,25 a 25,25 0 0 1 25,-25' fill='black'/%3E%3C/svg%3E");
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    background-image: none;
+  }
+  .inner-width-wrapper {
+    min-width: unset;
+    width: 100%;
+  }
+  .countdown-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding-bottom: 35px;
+  }
+  .number {
+    font-size: 3.2rem;
+  }
+  .label {
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  .footer-wrapper {
+    justify-content: center;
+    margin-top: 15px;
+  }
+  .countdown-footer {
+    text-align: center;
+    white-space: normal;
+    font-size: 0.8rem;
+    padding-right: 0;
+    line-height: 1.4;
+  }
+}
+
+.mobile-break {
+  display: none;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .mobile-break {
+    display: block;
+    content: "";
+    margin-top: 5px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    padding: 0 15px;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+
+  .event-date {
+    font-size: 1.4rem;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .decor-line {
+    border-width: 10px;
+  }
+
+  .decor-right {
+    display: block;
+    top: 50%;
+    right: -280px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .decor-left {
+    left: -180px;
+    bottom: 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  .countdown-card {
+    min-width: unset;
+    width: 95%;
+    max-width: 450px;
+    padding: 35px 15px 70px 15px;
+    background-color: #ffffff;
+    border-radius: 0;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 240' preserveAspectRatio='none'%3E%3Cpath d='M25,0 L575,0 a 25,25 0 0 1 25,25 L600,215 a 25,25 0 0 1 -25,25 L285,240 a 25,25 0 0 1 -25,-25 a 25,25 0 0 0 -25,-25 L25,190 a 25,25 0 0 1 -25,-25 L0,25 a 25,25 0 0 1 25,-25' fill='black'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 240' preserveAspectRatio='none'%3E%3Cpath d='M25,0 L575,0 a 25,25 0 0 1 25,25 L600,215 a 25,25 0 0 1 -25,25 L285,240 a 25,25 0 0 1 -25,-25 a 25,25 0 0 0 -25,-25 L25,190 a 25,25 0 0 1 -25,-25 L0,25 a 25,25 0 0 1 25,-25' fill='black'/%3E%3C/svg%3E");
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    background-image: none;
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.2));
+  }
+
+  .countdown-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2px;
+    padding-bottom: 10px;
+  }
+
+  .number {
+    font-size: 2.1rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #0f0a3d;
+  }
+
+  .label {
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+
+  .footer-wrapper {
+    margin-top: 10px;
+    padding-right: 10px;
+    justify-content: flex-end;
+  }
+
+  .countdown-footer {
+    font-size: 0.65rem;
+    text-align: right;
+    max-width: 180px;
+    margin-left: auto;
+  }
+}
+@media (max-width: 768px) {
+  .countdown-card {
+    position: relative;
+    padding-bottom: 65px;
+    min-height: 190px;
+  }
+
+  .footer-wrapper {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+    z-index: 10;
+  }
+
+  .countdown-footer {
+    white-space: normal;
+    max-width: 150px;
+    font-size: 0.7rem;
+    line-height: 1.1;
+    text-align: right;
+    color: #666;
+    font-weight: 600;
+    transform: translateY(0);
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1080px) {
+  .logo-row-container {
+    top: 50px;
+    padding: 0 60px;
+  }
+
+  .logo {
+    max-width: 200px;
+    transition: max-width 0.3s ease;
+  }
+
+  .logo-right .logo {
+    max-width: 180px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .logo {
+    max-width: 240px;
+  }
+
+  .logo-row-container {
+    padding: 0 100px;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 1025px) {
+  .container {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    transition: margin-top 0.3s ease, top 0.3s ease;
+  }
+}
+
+/* --- Section 2 --- */
+
+.section-word {
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
+  padding-bottom: 180px;
+  position: relative;
+  overflow: hidden;
+}
+
+.word-card-wrapper {
+  max-width: 950px;
+  width: 90%;
+  margin: 0 auto 80px auto;
+  position: relative;
+  z-index: 2;
+}
+
+.word-card-layout {
+  display: flex;
+  flex-direction: row;
+  background-color: #f8f7ff;
+  position: relative;
+  z-index: 3;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 950 520' preserveAspectRatio='none'%3E%3Cpath d='M25,0 L925,0 a 25,25 0 0 1 25,25 L950,495 a 25,25 0 0 1 -25,25 L210,520 a 25,25 0 0 1 -25,-25 a 25,25 0 0 0 -25,-25 L25,470 a 25,25 0 0 1 -25,-25 L0,25 a 25,25 0 0 1 25,-25 Z' fill='black'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 950 520' preserveAspectRatio='none'%3E%3Cpath d='M25,0 L925,0 a 25,25 0 0 1 25,25 L950,495 a 25,25 0 0 1 -25,25 L210,520 a 25,25 0 0 1 -25,-25 a 25,25 0 0 0 -25,-25 L25,470 a 25,25 0 0 1 -25,-25 L0,25 a 25,25 0 0 1 25,-25 Z' fill='black'/%3E%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.word-photo-container {
+  flex: 1;
+  min-height: 450px;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.faculty-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.word-text-box {
+  flex: 1.2;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.word-title {
+  font-weight: 500;
+  font-size: 32px;
+  color: #0a0b2e;
+  margin-bottom: 20px;
+}
+
+.word-body-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #0a0b2e;
+}
+
+.decor-chevron-inverted {
+  position: absolute;
+  bottom: -180px;
+  right: -180px;
+  width: 350px;
+  height: 350px;
+  border: 12px solid rgba(197, 41, 187, 1);
+  border-radius: 30px;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .section-word {
+    padding-bottom: 60px;
+  }
+
+  .word-card-layout {
+    flex-direction: column;
+    -webkit-mask-image: none;
+    mask-image: none;
+    border-radius: 25px;
+    background-color: #f8f7ff;
+    overflow: visible;
+  }
+
+  .word-photo-container {
+    min-height: 300px;
+    width: 100%;
+    -webkit-mask-image: radial-gradient(
+      circle at 100% 0%,
+      transparent 40px,
+      black 41px
+    );
+    mask-image: radial-gradient(
+      circle at 100% 0%,
+      transparent 40px,
+      black 41px
+    );
+    border-top-left-radius: 25px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .faculty-photo {
+    border-top-left-radius: 25px;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 950 520' preserveAspectRatio='none'%3E%3Cpath d='M25,0 L925,0 a 25,25 0 0 1 25,25 L950,495 a 25,25 0 0 1 -25,25 L210,520 a 25,25 0 0 1 -25,-25 a 25,25 0 0 0 -25,-25 L25,470 a 25,25 0 0 1 -25,-25 L0,25 a 25,25 0 0 1 25,-25 Z' fill='black'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 950 520' preserveAspectRatio='none'%3E%3Cpath d='M25,0 L925,0 a 25,25 0 0 1 25,25 L950,495 a 25,25 0 0 1 -25,25 L210,520 a 25,25 0 0 1 -25,-25 a 25,25 0 0 0 -25,-25 L25,470 a 25,25 0 0 1 -25,-25 L0,25 a 25,25 0 0 1 25,-25 Z' fill='black'/%3E%3C/svg%3E");
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+
+  .word-text-box {
+    padding: 40px 25px;
+  }
+
+  .word-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .decor-chevron-inverted {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .word-card-layout {
+    flex-direction: column;
+    background-color: #f8f7ff;
+    -webkit-mask-image: none;
+    mask-image: none;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+
+  .word-photo-container {
+    min-height: 320px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 320' preserveAspectRatio='none'%3E%3Cpath d='M0,0 L400,0 L400,320 L210,320 a 25,25 0 0 1 -25,-25 a 25,25 0 0 0 -25,-25 L25,270 a 25,25 0 0 1 -25,-25 Z' fill='black'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 320' preserveAspectRatio='none'%3E%3Cpath d='M0,0 L400,0 L400,320 L210,320 a 25,25 0 0 1 -25,-25 a 25,25 0 0 0 -25,-25 L25,270 a 25,25 0 0 1 -25,-25 Z' fill='black'/%3E%3C/svg%3E");
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+  }
+
+  .faculty-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .word-text-box {
+    margin-top: -50px;
+    padding: 70px 25px 40px 25px;
+    background-color: #f8f7ff;
+    position: relative;
+    z-index: 1;
+  }
+
+  .word-title {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-word {
+    padding-bottom: 80px;
+    overflow: hidden;
+  }
+
+  .word-card-layout {
+    flex-direction: column;
+    background-color: #f8f7ff;
+    -webkit-mask-image: none;
+    mask-image: none;
+    border-radius: 25px;
+    overflow: hidden;
+  }
+
+  .word-photo-container {
+    min-height: 320px;
+    position: relative;
+    z-index: 2;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 320' preserveAspectRatio='none'%3E%3Cpath d='M0,0 L400,0 L400,320 L210,320 a 25,25 0 0 1 -25,-25 a 25,25 0 0 0 -25,-25 L25,270 a 25,25 0 0 1 -25,-25 L0,250 Z' fill='black'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 320' preserveAspectRatio='none'%3E%3Cpath d='M0,0 L400,0 L400,320 L210,320 a 25,25 0 0 1 -25,-25 a 25,25 0 0 0 -25,-25 L25,270 a 25,25 0 0 1 -25,-25 L0,250 Z' fill='black'/%3E%3C/svg%3E");
+    -webkit-mask-size: 100% 100%;
+  }
+
+  .word-text-box {
+    margin-top: -50px;
+    padding: 75px 25px 40px 25px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .decor-chevron-inverted {
+    display: block;
+    width: 180px;
+    height: 180px;
+    border-width: 10px;
+    bottom: -60px;
+    right: -60px;
+    transform: rotate(45deg);
+    z-index: 0;
+  }
+}
+
+/* --- Section 4 --- */
+
+.section-cta {
+  background-color: #ffffff;
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-content-container {
+  max-width: 950px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-card-wrapper {
+  width: 100%;
+  max-width: 950px;
+  position: relative;
+  z-index: 5;
+  margin-bottom: 80px;
+}
+
+.cta-card-layout {
+  font-family: "Inter", sans-serif;
+  background-color: #140f4b;
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  border-radius: 25px 25px 0 25px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 950 520' preserveAspectRatio='none'%3E%3Cpath d='M25,0 L925,0 a 25,25 0 0 1 25,25 L950,495 a 25,25 0 0 1 -25,25 L210,520 a 25,25 0 0 1 -25,-25 a 25,25 0 0 0 -25,-25 L25,470 a 25,25 0 0 1 -25,-25 L0,25 a 25,25 0 0 1 25,-25 Z' fill='black'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 950 520' preserveAspectRatio='none'%3E%3Cpath d='M25,0 L925,0 a 25,25 0 0 1 25,25 L950,495 a 25,25 0 0 1 -25,25 L210,520 a 25,25 0 0 1 -25,-25 a 25,25 0 0 0 -25,-25 L25,470 a 25,25 0 0 1 -25,-25 L0,25 a 25,25 0 0 1 25,-25 Z' fill='black'/%3E%3C/svg%3E");
+  -webkit-mask-size: 100% 520px;
+  mask-size: 100% 520px;
+  -webkit-mask-position: bottom;
+  mask-position: bottom;
+  mask-repeat: no-repeat;
+}
+
+.cta-headline {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 16px 36px;
+  background-color: #ff7a00;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+.partner-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.partner-label {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.partner-logo {
+  max-width: 150px;
+  height: auto;
+  opacity: 0.9;
+}
+
+.decor-line-4 {
+  position: absolute;
+  pointer-events: none;
+  border: 12px solid rgba(197, 41, 187, 1);
+  border-radius: 30px;
+  width: 250px;
+  height: 250px;
+  z-index: 1;
+  transform: rotate(45deg);
+}
+
+.decor-left-cta-4 {
+  bottom: 200px;
+  left: -200px;
+}
+
+.decor-right-cta-4 {
+  bottom: -175px;
+  right: -100px;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .section-cta {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .cta-card-layout {
+    padding: 60px 20px 100px 20px;
+    background-color: #140f4b;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400' preserveAspectRatio='none'%3E%3Cpath d='M25,0 L375,0 a 25,25 0 0 1 25,25 L400,375 a 25,25 0 0 1 -25,25 L210,400 a 25,25 0 0 1 -25,-25 a 25,25 0 0 0 -25,-25 L25,350 a 25,25 0 0 1 -25,-25 L0,25 a 25,25 0 0 1 25,-25 Z' fill='black'/%3E%3C/svg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400' preserveAspectRatio='none'%3E%3Cpath d='M25,0 L375,0 a 25,25 0 0 1 25,25 L400,375 a 25,25 0 0 1 -25,25 L210,400 a 25,25 0 0 1 -25,-25 a 25,25 0 0 0 -25,-25 L25,350 a 25,25 0 0 1 -25,-25 L0,25 a 25,25 0 0 1 25,-25 Z' fill='black'/%3E%3C/svg%3E");
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    border-radius: 0;
+  }
+
+  .decor-left-cta-4 {
+    bottom: 120px;
+    left: -220px;
+    transform: rotate(45deg);
+    top: auto;
+    border-width: 10px;
+  }
+
+  .decor-right-cta-4 {
+    bottom: -220px;
+    right: -100px;
+    transform: rotate(-45deg);
+    border-width: 10px;
+  }
+
+  .cta-headline {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .partner-area {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    position: relative;
+    z-index: 6;
+  }
+}
+
+/* --- Section 5 (Footer) --- */
+
+.main-footer {
+  font-family: "Inter", sans-serif;
+  background-color: #140f4b;
+  color: #ffffff;
+  padding: 80px 0 40px 0;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-footer::before {
+  content: "";
+  position: absolute;
+  bottom: -170px;
+  left: 0px;
+  width: 250px;
+  height: 250px;
+  border: 12px solid #ffffff;
+  border-radius: 30px;
+  transform: rotate(45deg);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 1;
+}
+
+.footer-content-container {
+  position: relative;
+  z-index: 2;
+  max-width: 950px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.footer-main-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.brand-description {
+  color: rgba(255, 255, 255, 1);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.contact-item::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-shrink: 0;
+}
+
+.contact-item.phone::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M6.62 10.79a15.15 15.15 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.27 11.72 11.72 0 003.7.59 1 1 0 011 1v3.94a1 1 0 01-1.06 1A19.93 19.93 0 013 4.06a1 1 0 011-1.06h3.94a1 1 0 011 1 11.72 11.72 0 00.59 3.7 1 1 0 01-.27 1.11l-2.2 2.2z'/%3E%3C/svg%3E");
+}
+
+.contact-item.email::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E");
+}
+
+.contact-item a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-item a:hover {
+  opacity: 0.8;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: opacity 0.2s;
+}
+
+.social-icon:hover {
+  opacity: 0.7;
+}
+
+.social-icon.linkedin {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z'/%3E%3C/svg%3E");
+}
+
+.social-icon.instagram {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 01-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 017.8 2m-.2 2A3.6 3.6 0 004 7.6v8.8c0 2 1.6 3.6 3.6 3.6h8.8c2 0 3.6-1.6 3.6-3.6V7.6C20 5.6 18.4 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 011.25 1.25A1.25 1.25 0 0117.25 8 1.25 1.25 0 0116 6.75a1.25 1.25 0 011.25-1.25M12 7a5 5 0 015 5 5 5 0 01-5 5 5 5 0 01-5-5 5 5 0 015-5m0 2a3 3 0 00-3 3 3 3 0 003 3 3 3 0 003-3 3 3 0 00-3-3z'/%3E%3C/svg%3E");
+}
+
+.social-icon.facebook {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M22 12a10 10 0 10-11.56 9.87v-6.98H7.89V12h2.55V9.3c0-2.52 1.5-3.9 3.79-3.9 1.1 0 2.25.2 2.25.2v2.48h-1.27c-1.25 0-1.64.77-1.64 1.56V12h2.8l-.45 2.89h-2.35v6.98A10 10 0 0022 12z'/%3E%3C/svg%3E");
+}
+
+.footer-legal-bar {
+  padding-top: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  text-align: center;
+}
+
+.legal-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.copyright,
+.legal-links a {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.legal-links a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .footer-legal-bar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .legal-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+.footer-website-link {
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 5px;
+  transition: opacity 0.2s ease;
+}
+
+.footer-website-link:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .main-footer::before {
+    display: none;
+  }
+
+  .main-footer {
+    padding: 60px 0 40px 0;
+    text-align: left;
+  }
+
+  .footer-main-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  .footer-column {
+    align-items: flex-start;
+  }
+
+  .footer-brand-area {
+    padding-right: 0;
+    align-items: flex-start;
+  }
+
+  .brand-description {
+    margin: 0 auto;
+  }
+
+  .contact-list {
+    align-items: flex-start;
+  }
+
+  .social-icons {
+    justify-content: flex-start;
+  }
+
+  .footer-legal-bar {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .legal-links {
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+
+.footer-logo-img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+
+      <div class="decor-line decor-left"></div>
+      <div class="decor-line decor-right"></div>
+
+      <div class="logo-box logo-left">
+        <img src="https://www.barialink.com/files/19522/BL_10_years_logo_blauw_tekst_2.jpg?lmsauth=ccd5ff70bdbae015755834c8cd2b51740276da8d" alt="BARIAlink 10 Years" class="logo" />
+    </div>
+
+    <div class="logo-box logo-right">
+        <img src="https://www.barialink.com/files/19522/NEW_IFSO_LOGO_DESIGN_(9)2(2)_S.png?lmsauth=659110995feddb26ee8067c58ac912171d0f7c7f" alt="IFSO Logo" class="logo" />
+    </div>
+    
+      <div class="container">
+
+
+        <div class="content">
+          <p class="subtitle">Join us to celebrate</p>
+          <h1>
+            <span class="highlight-orange">10 years</span> of linking international experts
+            <br class="desktop-break" />
+            <span class="highlight-blue">on Metabolic Bariatric Surgery</span>
+          </h1>
+          <p class="event-date">Friday 2nd October 2026</p>
+      
+          <a href="#" class="btn-registration">Registration &rarr;</a>
+      </div>
+
+        <div class="countdown-card">
+          <div class="countdown-content">
+              <div class="inner-width-wrapper">
+                  <div class="countdown-box">
+                      <div class="time-unit">
+                          <span class="number" id="days">186</span>
+                          <span class="label">Days</span>
+                      </div>
+                      <div class="time-unit">
+                          <span class="number" id="hours">18</span>
+                          <span class="label">Hours</span>
+                      </div>
+                      <div class="time-unit">
+                          <span class="number" id="minutes">34</span>
+                          <span class="label">Minutes</span>
+                      </div>
+                      <div class="time-unit">
+                          <span class="number" id="seconds">19</span>
+                          <span class="label">Seconds</span>
+                      </div>
+                  </div>
+                  
+                  <div class="footer-wrapper">
+                      <p class="countdown-footer">until the start of the event on October 2nd 2026</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="white-footer-block"></div>
+
+      <!--<script src="script.js"></script>-->
+      <script>
+// Set the date we're counting down to
+const countDownDate = new Date("Oct 2, 2026 00:00:00").getTime();
+
+// Update the count down every 1 second
+const timer = setInterval(function () {
+  // Get today's date and time
+  const now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  const distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result with leading zeros
+  // We leave 'days' as is, since it is often 3 digits
+  document.getElementById("days").innerHTML = days;
+
+  // Pad hours, minutes, and seconds to always show 2 digits
+  document.getElementById("hours").innerHTML = String(hours).padStart(2, "0");
+  document.getElementById("minutes").innerHTML = String(minutes).padStart(
+    2,
+    "0"
+  );
+  document.getElementById("seconds").innerHTML = String(seconds).padStart(
+    2,
+    "0"
+  );
+
+  // If the count down is finished, display some text
+  if (distance < 0) {
+    clearInterval(timer);
+    document.querySelector(".countdown-box").innerHTML =
+      "<h3>EVENT STARTED</h3>";
+  }
+}, 1000);
+
+      </script>
+    </section>
+
+    <section class="section-word">
+      <div class="word-card-wrapper">
+        <div class="word-card-layout">
+          <div class="word-photo-container">
+            <img
+              src="https://www.barialink.com/files/19522/Foto_Dr_Dillemans_3_gekozen.jpg?lmsauth=954086f3b87c62063eaaa22e1687e84c6c7cc1c7"
+              alt="Faculty"
+              class="faculty-photo"
+            />
+          </div>
+
+          <div class="word-text-box">
+            <h3 class="word-title">A word from Dr. Dillemans</h3>
+
+            <p class="word-body-text">
+              Dr. Dillemans and the BARIAlink team are delighted to invite you
+              to celebrate the 10-Year Anniversary of BARIAlink with us.
+            </p>
+            <br />
+            <p class="word-body-text">
+              Over the past decade, BARIAlink has served as a dedicated platform
+              for the discussion of complex and challenging cases in metabolic
+              bariatric surgery, fostering collaboration and sharing expertise
+              and clinical excellence.
+            </p>
+            <br />
+            <p class="word-body-text">
+              On this special occasion, we will reflect on some of our BARIAlink
+              achievements, but more importanly focus on the future, both in
+              further improving our educational goals as well as keeping an open
+              view on the still rapidly evolving field of metabolic bariatric
+              surgery and other treatment modalities.
+            </p>
+            <br />
+            <p class="word-body-text">
+              We look forward to welcoming you for an engaging and insightful
+              gathering.
+            </p>
+          </div>
+        </div>
+
+        <div class="decor-chevron-inverted"></div>
+      </div>
+    </section>
+
+    <section class="section-cta">
+      <div class="cta-content-container">
+        <div class="cta-card-wrapper">
+          <div class="cta-card-layout">
+            <h2 class="cta-headline">Want to attend the celebrations?</h2>
+            <a href="#register" class="cta-button">Register here &rarr;</a>
+          </div>
+        </div>
+
+        <div class="partner-area">
+          <p class="partner-label">Partner of</p>
+          <img
+            src="https://www.barialink.com/files/19522/logo(2).png?lmsauth=8ce72257cf5aa4a05c6e9a3af816c12a549de9bd"
+            alt="Partner"
+            class="partner-logo"
+          />
+        </div>
+      </div>
+      <div class="decor-line-4 decor-left-cta-4"></div>
+      <div class="decor-line-4 decor-right-cta-4"></div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="footer-content-container">
+        <div class="footer-main-grid">
+          <div class="footer-column footer-brand-area">
+            <div class="footer-logo">
+              <img
+                src="https://www.barialink.com/files/19522/Barialink_Logo_with_oval_rev_1.png?lmsauth=a9a350c876638e8ea31e3b79d4d26a9ba6e4c48b"
+                alt="BARIALink Logo"
+                class="footer-logo-img"
+              />
+            </div>
+
+            <p class="brand-description">
+              Improving the knowledge and skills<br /> to deal with complex bariatric
+              cases.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Contact details</h3>
+            <ul class="contact-list">
+              <li class="contact-item phone">
+                <a href="tel:+32473816599">+32 473 81 65 99</a>
+              </li>
+              <li class="contact-item email">
+                <a href="mailto:petra@barialink.com">petra@barialink.com</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Stay connected</h3>
+            <div class="social-icons">
+              <a
+                href="https://www.linkedin.com/company/barialink"
+                target="_blank"
+                class="social-icon linkedin"
+                aria-label="LinkedIn"
+              ></a>
+              <a
+                href="http://www.instagram.com/barialink"
+                class="social-icon instagram"
+                target="_blank"
+                aria-label="Instagram"
+              ></a>
+              <a
+                href="http://www.facebook.com/BARIAlink"
+                class="social-icon facebook"
+                target="_blank"
+                aria-label="Facebook"
+              ></a>
+            </div>
+            <a target="_blank" href="https://www.barialink.com/?visitor=true" class="footer-website-link"
+              >www.barialink.com</a
+            >
+          </div>
+        </div>
+
+        <div class="footer-legal-bar">
+          <p class="copyright">&copy; 2026 BARIALink</p>
+          <div class="legal-links">
+            <a target="_blank" href="https://www.barialink.com/page/show/2088?portal_id=143">Terms and conditions</a>
+            <a target="_blank" href="https://www.barialink.com/page/show/2087?portal_id=143">Privacy Policy</a>
+            <a target="_blank" href="https://www.barialink.com/page/show/2089?portal_id=143">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
